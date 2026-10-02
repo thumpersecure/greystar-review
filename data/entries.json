@@ -1,5 +1,21 @@
 [
  {
+  "id": "greystar-data-breach-lawsuit-investigation-2026",
+  "date": "2026-09-21",
+  "title": "Greystar Data Breach Lawsuit Investigation",
+  "category": "news",
+  "subject": [
+   "greystar"
+  ],
+  "location": "Nationwide",
+  "property": "",
+  "outlet": "Claim Depot",
+  "url": "https://www.claimdepot.com/investigations/greystar-data-breach-2026",
+  "archive_url": "",
+  "summary": "Claim Depot reports that law firm Shamis & Gentile P.A. is investigating possible claims over the Greystar Real Estate Partners data breach. According to the page, an unauthorized party accessed an employee email account between May 1 and May 18, 2026, and Greystar began notifying people on Aug. 27, 2026. It cites filings showing at least 333 people affected in Washington and five in Massachusetts, adding the Massachusetts count and the law-firm investigation to the WA AG notice (greystar-data-breach-notice-wa-ag-2026).",
+  "status": "investigation (no lawsuit filed per source)"
+ },
+ {
   "id": "greystar-data-breach-notice-wa-ag-2026",
   "date": "2026-08-27",
   "title": "Greystar notifies Washington AG of data breach involving employee email account",
@@ -46,6 +62,38 @@
   "archive_url": "",
   "summary": "Virginia Mercury reported HRI complaints alleging Greystar-managed properties in Virginia refused or illegally conditioned housing-voucher applicants despite state source-of-income protections.",
   "status": "complaints filed; pending"
+ },
+ {
+  "id": "kentucky-settles-antitrust-claims-against-greystar-in-realpage-rent-se-2026",
+  "date": "2026-07-21",
+  "title": "Kentucky Settles Antitrust Claims Against Greystar in RealPage Rent-Setting Case",
+  "category": "lawsuit",
+  "subject": [
+   "greystar"
+  ],
+  "location": "Kentucky",
+  "property": "",
+  "outlet": "PYMNTS.com",
+  "url": "https://www.pymnts.com/cpi-posts/kentucky-settles-antitrust-claims-against-greystar-in-realpage-rent-setting-case/",
+  "archive_url": "",
+  "summary": "Citing Law360, PYMNTS reports that Kentucky settled its antitrust claims against Greystar Management Services in AG Russell Coleman's RealPage suit, filed July 2025 in the Eastern District of Kentucky (kentucky-ag-v-realpage-greystar-2025). Terms were not disclosed. It adds that a federal judge had earlier let key claims proceed after Greystar sought dismissal, and that the complaint alleged hundreds of thousands of Kentucky renters were affected.",
+  "status": "settled (terms undisclosed)"
+ },
+ {
+  "id": "greystar-settles-out-of-kentucky-s-realpage-antitrust-case-2026",
+  "date": "2026-07-20",
+  "title": "Greystar Settles Out Of Kentucky's RealPage Antitrust Case",
+  "category": "lawsuit",
+  "subject": [
+   "greystar"
+  ],
+  "location": "Kentucky",
+  "property": "",
+  "outlet": "Law360 Real Estate Authority",
+  "url": "https://www.law360.com/real-estate-authority/articles/2502916/greystar-settles-out-of-kentucky-s-realpage-antitrust-case",
+  "archive_url": "",
+  "summary": "Law360 reports that Kentucky settled its federal antitrust claims against Greystar Management Services, which the state alleged used RealPage revenue-management software to fix rents. This is the source of the July 2026 Greystar settlement noted on kentucky-ag-v-realpage-greystar-2025.",
+  "status": "settled (terms undisclosed)"
  },
  {
   "id": "guardian-greystar-civil-rights-voucher-complaints-2026",
@@ -225,6 +273,22 @@
   "status": "published"
  },
  {
+  "id": "judge-oks-greystar-deal-in-doj-s-realpage-price-fixing-suit-2026",
+  "date": "2026-03-02",
+  "title": "Judge OKs Greystar Deal In DOJ's RealPage Price-Fixing Suit",
+  "category": "lawsuit",
+  "subject": [
+   "greystar"
+  ],
+  "location": "North Carolina",
+  "property": "",
+  "outlet": "Law360",
+  "url": "https://www.law360.com/articles/2447822/judge-oks-greystar-deal-in-doj-s-realpage-price-fixing-suit",
+  "archive_url": "",
+  "summary": "According to Law360, a North Carolina federal judge gave final sign-off on March 2, 2026 to the Justice Department's antitrust settlement with Greystar Management Services in the federal RealPage rent price-fixing case. This finalizes the consent decree proposed in August 2025 (doj-greystar-realpage-consent-decree-2025).",
+  "status": "settled (consent decree finalized by court)"
+ },
+ {
   "id": "ca-crd-greystar-criminal-history-screening-2026",
   "date": "2026-01-13",
   "title": "Greystar California agrees to revise tenant screening statewide after fair housing complaint",
@@ -274,6 +338,54 @@
   "featured": true
  },
  {
+  "id": "colorado-settles-hidden-fees-lawsuit-against-greystar-in-the-latest-ca-2025",
+  "date": "2025-12-02",
+  "title": "Colorado settles hidden fees lawsuit against Greystar in the latest case resolved with landlord giant",
+  "category": "regulator",
+  "subject": [
+   "greystar"
+  ],
+  "location": "Colorado",
+  "property": "",
+  "outlet": "The Denver Post",
+  "url": "https://www.denverpost.com/2025/12/02/colorado-greystar-apartments-hidden-fees-settlement/",
+  "archive_url": "",
+  "summary": "Denver Post coverage of the FTC/Colorado $24 million hidden-fees settlement (ftc-colorado-greystar-24m-settlement-2025). It adds that the suit described two Denver complexes where fees allegedly pushed costs above advertised rent, and that Greystar operates more than 45,000 units in Colorado. It also quotes Greystar saying the deal 'enhances transparency' and notes Colorado's new rent-fee law takes effect Jan. 1.",
+  "status": "settled $24M"
+ },
+ {
+  "id": "attorney-general-phil-weiser-ftc-announce-24m-settlement-with-greystar-2025",
+  "date": "2025-12-02",
+  "title": "Attorney General Phil Weiser, FTC announce $24M settlement with Greystar for misleading renters about costs, saddling tenants with hidden fees",
+  "category": "regulator",
+  "subject": [
+   "greystar"
+  ],
+  "location": "Colorado",
+  "property": "",
+  "outlet": "Colorado Attorney General (coag.gov)",
+  "url": "https://coag.gov/press-releases/weiser-ftc-announce-24m-settlement-with-greystar/",
+  "archive_url": "",
+  "summary": "Colorado's announcement of the FTC/Colorado hidden-fees settlement already recorded from the FTC side (ftc-colorado-greystar-24m-settlement-2025). This source adds the split: Colorado receives $1 million for costs, enforcement and consumer education, while the FTC receives $23 million for nationwide relief. It also lists the disclosure terms: total monthly price shown upfront, every fee itemized as mandatory or optional, and no upfront payment before full pricing is disclosed.",
+  "status": "settled $24M ($23M FTC, $1M Colorado)"
+ },
+ {
+  "id": "greystar-reaches-7m-settlement-in-antitrust-lawsuit-over-rent-increase-2025",
+  "date": "2025-11-28",
+  "title": "Greystar reaches $7M settlement in antitrust lawsuit over rent increases",
+  "category": "regulator",
+  "subject": [
+   "greystar"
+  ],
+  "location": "Mountain View, CA",
+  "property": "",
+  "outlet": "Pleasanton Weekly",
+  "url": "https://www.pleasantonweekly.com/courts/2025/11/28/greystar-reaches-7m-settlement-in-antitrust-lawsuit-over-rent-increases/",
+  "archive_url": "",
+  "summary": "Bay Area coverage of the nine-state $7 million RealPage settlement announced by California AG Rob Bonta (nine-state-ag-greystar-7m-settlement-2025). It adds a Greystar spokesperson statement and lists Greystar-managed properties in Mountain View and on the Peninsula. Bonta's office said it could not say whether Santa Clara or San Mateo County properties were affected.",
+  "status": "settled $7M (multistate)"
+ },
+ {
   "id": "lbpost-greystar-7m-multistate-settlement-2025",
   "date": "2025-11-27",
   "title": "Major landlord reaches $7M settlement with California, other states in alleged rent price scheme",
@@ -306,6 +418,54 @@
   "status": "settled with many plaintiffs (per Atlanta Magazine)"
  },
  {
+  "id": "north-carolina-settles-with-greystar-in-ai-rent-fixing-lawsuit-2025",
+  "date": "2025-11-20",
+  "title": "North Carolina settles with Greystar in AI rent-fixing lawsuit",
+  "category": "regulator",
+  "subject": [
+   "greystar"
+  ],
+  "location": "North Carolina",
+  "property": "",
+  "outlet": "NC Newsline",
+  "url": "https://ncnewsline.com/2025/11/20/north-carolina-settles-with-greystar-in-ai-rent-fixing-lawsuit/",
+  "archive_url": "",
+  "summary": "North Carolina coverage of the nine-state $7 million RealPage settlement announced by AG Jeff Jackson (nine-state-ag-greystar-7m-settlement-2025). It adds Jackson's estimate that more than 25,000 NC renters are affected and notes Greystar is the state's largest landlord. Third-party pricing software is allowed only under a court-appointed monitor, and Greystar and the states jointly moved to dismiss it from the 2024 federal suit.",
+  "status": "settled $7M (multistate)"
+ },
+ {
+  "id": "colorado-reaches-settlement-with-landlord-giant-greystar-in-price-fixi-2025",
+  "date": "2025-11-19",
+  "title": "Colorado reaches settlement with landlord giant Greystar in price-fixing lawsuit",
+  "category": "regulator",
+  "subject": [
+   "greystar"
+  ],
+  "location": "Colorado",
+  "property": "",
+  "outlet": "The Denver Post",
+  "url": "https://www.denverpost.com/2025/11/19/colorado-greystar-rent-realpage/",
+  "archive_url": "",
+  "summary": "Denver Post coverage of the nine-state $7 million RealPage settlement (nine-state-ag-greystar-7m-settlement-2025). It adds that Colorado would receive more than $1 million and that Gov. Polis vetoed a 2025 bill banning RealPage-style software. It also reports Greystar's statement that it was 'pleased this matter is resolved.'",
+  "status": "settled $7M (proposed consent decree, pending before the court)"
+ },
+ {
+  "id": "oregon-reaches-7m-settlement-with-landlord-giant-greystar-in-price-fix-2025",
+  "date": "2025-11-19",
+  "title": "Oregon reaches $7M settlement with landlord giant Greystar in price-fixing lawsuit",
+  "category": "regulator",
+  "subject": [
+   "greystar"
+  ],
+  "location": "Oregon",
+  "property": "",
+  "outlet": "KGW (kgw.com)",
+  "url": "https://www.kgw.com/article/money/business/oregon-reaches-settlement-landlord-giant-greystar-price-fixing-lawsuit/283-e276ab21-7b91-4c76-81b0-a7e2415b3cb0",
+  "archive_url": "",
+  "summary": "Oregon coverage of the nine-state $7 million RealPage settlement with Greystar (nine-state-ag-greystar-7m-settlement-2025), announced by Oregon Attorney General Dan Rayfield. The states alleged Greystar shared information and used RealPage's algorithm to raise rents instead of competing. Contemporaneous Oregon coverage puts Greystar at almost 19,000 Portland units in 2023.",
+  "status": "settled $7M (multistate, filed with court)"
+ },
+ {
   "id": "nine-state-ag-greystar-7m-settlement-2025",
   "date": "2025-11-18",
   "title": "Nine state attorneys general reach $7 million settlement with Greystar over algorithmic rent pricing",
@@ -320,6 +480,54 @@
   "archive_url": "",
   "summary": "The attorneys general of California, Colorado, Connecticut, Illinois, Massachusetts, Minnesota, North Carolina, Oregon and Tennessee filed a proposed $7 million settlement resolving their claims against Greystar Management Services in the January 2025 RealPage litigation. Greystar agreed to stop using pricing algorithms that rely on competitors' confidential data, accept a court-appointed monitor if using third-party pricing software, and cooperate against remaining defendants.",
   "status": "settled $7M"
+ },
+ {
+  "id": "attorney-general-phil-weiser-announces-7m-settlement-with-greystar-for-2025",
+  "date": "2025-11-18",
+  "title": "Attorney General Phil Weiser announces $7M settlement with Greystar for price-fixing scheme that drove up rents for Coloradans",
+  "category": "regulator",
+  "subject": [
+   "greystar"
+  ],
+  "location": "Colorado",
+  "property": "",
+  "outlet": "Colorado Attorney General (coag.gov)",
+  "url": "https://coag.gov/press-releases/weiser-announces-7m-settlement-with-greystar/",
+  "archive_url": "",
+  "summary": "Colorado AG release on the nine-state $7 million RealPage settlement (nine-state-ag-greystar-7m-settlement-2025). It adds that Colorado receives more than $1 million for antitrust and consumer-protection work. It also says Greystar is barred from revenue-management software that uses competitors' nonpublic data, and that the settling states may share in Greystar's cooperation with DOJ.",
+  "status": "settled $7M (proposed consent decree)"
+ },
+ {
+  "id": "greystar-others-settle-realpage-rental-pricing-lawsuit-2025",
+  "date": "2025-10-08",
+  "title": "Greystar, others settle RealPage rental pricing lawsuit",
+  "category": "lawsuit",
+  "subject": [
+   "greystar"
+  ],
+  "location": "Nashville, TN",
+  "property": "",
+  "outlet": "Multifamily Dive",
+  "url": "https://www.multifamilydive.com/news/realpage-class-action-lawsuit-settlement/802392/",
+  "archive_url": "",
+  "summary": "Trade-press coverage of the RealPage MDL class settlements in the Middle District of Tennessee (realpage-mdl-greystar-50m-class-settlement-2025). It adds the full picture: 26 class settlements worth $141.8 million, with Greystar's $50 million the largest and Simpson, Avenue5, Bell, Bozzuto, Pinnacle and Winn also settling. Settlers agreed to stop sharing nonpublic data with RealPage's rent-setting algorithm, with no admission of wrongdoing.",
+  "status": "settled $50M (class settlement pending before the court)"
+ },
+ {
+  "id": "greystar-agrees-to-50-million-settlement-in-realpage-rental-pricing-la-2025",
+  "date": "2025-10-02",
+  "title": "Greystar agrees to $50 million settlement in RealPage rental pricing lawsuit",
+  "category": "lawsuit",
+  "subject": [
+   "greystar"
+  ],
+  "location": "Nashville, TN",
+  "property": "",
+  "outlet": "Reuters",
+  "url": "https://www.reuters.com/legal/government/greystar-agrees-50-million-settlement-realpage-rental-pricing-lawsuit-2025-10-02/",
+  "archive_url": "",
+  "summary": "Reuters report on Greystar's $50 million settlement of the renter class action in the RealPage MDL (realpage-mdl-greystar-50m-class-settlement-2025). Renters alleged Greystar and other landlords shared nonpublic data with RealPage to push rents above competitive levels. Greystar's deal was the largest in a group of preliminary class settlements totaling about $141 million.",
+  "status": "settled $50M (class settlement pending before the court)"
  },
  {
   "id": "realpage-mdl-greystar-50m-class-settlement-2025",
@@ -367,6 +575,22 @@
   "url": "https://www.kob.com/new-mexico/albuquerque-metro/frustration-reaches-new-level-after-disabled-mans-apartment-floods-twice/",
   "archive_url": "",
   "summary": "KOB 4 reported that a disabled Section 8 tenant's unit at Greystar-managed Copper Hills flooded in February and again in August, leaving ceiling holes, warped cabinets and ruined furniture; he said Greystar told him it could not help because he lacked renter's insurance. KOB said the leasing office was closed during business hours and it could not reach Greystar.",
+  "status": "published"
+ },
+ {
+  "id": "why-hasn-t-blackstone-settled-the-doj-s-realpage-price-fixing-suit-lik-2025",
+  "date": "2025-08-25",
+  "title": "Why hasn't Blackstone settled the DOJ's RealPage price-fixing suit like peers Greystar and Cortland?",
+  "category": "news",
+  "subject": [
+   "greystar"
+  ],
+  "location": "Nationwide",
+  "property": "",
+  "outlet": "Private Equity Stakeholder Project (PESP)",
+  "url": "https://pestakeholder.org/news/why-hasnt-blackstone-settled-the-dojs-realpage-price-fixing-suit-like-peers-greystar-and-cortland/",
+  "archive_url": "",
+  "summary": "Advocacy-group commentary contrasting the Aug. 8, 2025 Greystar settlement with DOJ and state AGs (doj-greystar-realpage-consent-decree-2025) with Blackstone, which it says had not settled or announced it stopped using RealPage. It restates the Greystar terms: no competitor-data pricing algorithms, no sharing of sensitive pricing data, a court-appointed monitor, no RealPage landlord meetings, and cooperation against RealPage. It also says Greystar manages almost 950,000 units.",
   "status": "published"
  },
  {
@@ -496,6 +720,22 @@
   "archive_url": "",
   "summary": "Tenants said hundreds of swallows nest on Building 8 each spring, leaving droppings, dead birds and bird mites that they say enter apartments, and described unfulfilled promises from management. Greystar told 9NEWS its options are limited because the swallows are protected under the Migratory Bird Treaty Act and it is deterring nesting in compliance with federal law.",
   "status": "published"
+ },
+ {
+  "id": "apartment-manager-greystar-faces-more-junk-fee-lawsuits-after-ftc-case-2025",
+  "date": "2025-04-30",
+  "title": "Apartment manager Greystar faces more 'junk fee' lawsuits after FTC case",
+  "category": "lawsuit",
+  "subject": [
+   "greystar"
+  ],
+  "location": "Nationwide",
+  "property": "",
+  "outlet": "Reuters",
+  "url": "https://www.reuters.com/legal/government/apartment-manager-greystar-faces-more-junk-fee-lawsuits-after-ftc-case-2025-04-30/",
+  "archive_url": "",
+  "summary": "Reuters report that Greystar faced additional proposed class actions over alleged hidden 'junk fees' after the January 2025 FTC/Colorado suit (ftc-colorado-v-greystar-complaint-2025). Its timing matches the California suit filed in the Southern District of California in late April 2025 (wu-v-greystar-california-junk-fees-2025).",
+  "status": "pending"
  },
  {
   "id": "wu-v-greystar-california-junk-fees-2025",
