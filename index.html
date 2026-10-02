@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Greystar Review</title>
+<meta name="description" content="The Greystar Review: a sourced record of lawsuits, regulator actions, investigations and tenant reports involving Greystar and its chairman and CEO Bob Faith.">
+<meta property="og:title" content="The Greystar Review">
+<meta property="og:description" content="Lawsuits, regulators, reporting and letters from tenants on America's largest apartment manager. Every story sourced.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Libre+Franklin:wght@400;600;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="topbar"><span id="issue">Vol. I</span><span class="hide-sm">Independent · Every story sourced</span><span id="count"></span></div>
+
+<header class="nameplate">
+  <p class="tagline">The record on America's largest landlord</p>
+  <h1><span class="the">The</span> Greystar Review</h1>
+  <div class="rules"></div>
+  <nav class="depts" id="cats" aria-label="Sections">
+    <button data-cat="all" class="on">The Record</button>
+    <button data-cat="lawsuit">Court Docket</button>
+    <button data-cat="regulator">Regulators</button>
+    <button data-cat="news">Reporting</button>
+    <button data-cat="tenant">Letters from Tenants</button>
+    <button data-cat="bf">The Chairman</button>
+  </nav>
+</header>
+
+<section class="cover" id="cover" aria-label="Cover story"></section>
+
+<div class="toolbar">
+  <input id="q" type="search" placeholder="Search the archive: property, city, outlet, keyword" aria-label="Search">
+  <select id="loc" aria-label="Location"><option value="">All locations</option></select>
+  <select id="sort" aria-label="Sort"><option value="desc">Latest first</option><option value="asc">Earliest first</option></select>
+</div>
+
+<main id="ledger" aria-live="polite"></main>
+
+<footer class="foot">
+  <section class="props" aria-labelledby="props-h">
+    <h2 id="props-h">The Properties</h2>
+    <p class="props-dek">An index of all <span id="props-n"></span> properties in greystar.com's own property sitemap, by state and city. Select a name to search the archive for it.</p>
+    <input id="pq" type="search" placeholder="Find a property or city" aria-label="Find a property">
+    <div id="props"></div>
+  </section>
+  <div class="colophon">
+    <p class="mini-plate"><span class="the">The</span> Greystar Review</p>
+    <p><strong>Editorial standard.</strong> Stories are drawn from court records, agency releases, published journalism and public tenant review sites. Allegations are reported as allegations, settlements as resolutions rather than admissions, and outcomes are stated where known. New items are found each day and published only after editorial review.</p>
+    <p><strong>Corrections.</strong> Something wrong? <a href="https://github.com/thumpersecure/greystar-review/issues/new?labels=correction&title=Correction:%20">File a correction</a>. Open data: <a href="data/entries.json">entries.json</a> · <a href="data/properties.json">properties.json</a>.</p>
+  </div>
+</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>
