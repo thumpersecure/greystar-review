@@ -102,9 +102,11 @@ def main():
     if made and topic:
         msg = '\n'.join(f'• {t}' for t, _ in made[:8]) + (f'\n…and {len(made)-8} more' if len(made) > 8 else '')
         repo = os.environ['GITHUB_REPOSITORY']
-        urllib.request.urlopen(urllib.request.Request('https://ntfy.sh/' + topic, data=msg.encode(), headers={
-            'Title': f'Greystar Review: {len(made)} new candidate(s)', 'Tags': 'newspaper',
-            'Click': f'https://github.com/{repo}/issues?q=is%3Aopen+label%3Acandidate'}), timeout=20)
+        hdr = {'Title': f'Greystar Review: {len(made)} new candidate(s)', 'Tags': 'newspaper',
+               'Click': f'https://github.com/{repo}/issues?q=is%3Aopen+label%3Acandidate'}
+        if os.environ.get('NTFY_TOKEN'):
+            hdr['Authorization'] = 'Bearer ' + os.environ['NTFY_TOKEN']  # topic is reserved
+        urllib.request.urlopen(urllib.request.Request('https://ntfy.sh/' + topic, data=msg.encode(), headers=hdr), timeout=20)
 
 if __name__ == '__main__':
     main()
