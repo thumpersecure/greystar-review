@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thumpersecure.github.io/greystar-review/sitemap.xml

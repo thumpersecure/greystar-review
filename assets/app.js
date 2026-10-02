@@ -4,6 +4,8 @@
   const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const st={cat:'all',q:'',loc:'',sort:'desc'};
   try{Object.assign(st,JSON.parse(sessionStorage.getItem('gsr-filters')||'{}'))}catch(e){}
+  const qp=new URLSearchParams(location.search).get('q');
+  if(qp!==null){st.q=qp.trim();st.cat='all';st.loc=''}
   let all=[];
 
   function fmtDate(d){
@@ -33,11 +35,11 @@
       const bf=(e.subject||[]).includes('bob-faith')?' · The Chairman':'';
       html+=`<article class="entry ${esc(e.category)}" id="${esc(e.id)}">
           <p class="kicker">${esc(LABEL[e.category]||e.category)}${bf}</p>
-          <h2><a href="${esc(e.url)}" rel="noopener" target="_blank">${esc(e.title)}</a></h2>
+          <h2><a href="stories/${esc(e.id)}.html">${esc(e.title)}</a></h2>
           <p>${esc(e.summary)}</p>
           ${e.status?`<div class="status">${esc(e.status)}</div>`:''}
           <div class="byline">${esc([fmtDate(e.date),e.outlet,e.property,e.location].filter(Boolean).join(' · '))}</div>
-          <div class="src"><a href="${esc(e.url)}" rel="noopener" target="_blank">Source</a>${e.archive_url?`<a href="${esc(e.archive_url)}" rel="noopener" target="_blank">Archive</a>`:''}<a href="#${esc(e.id)}">Permalink</a></div>
+          <div class="src"><a href="${esc(e.url)}" rel="noopener" target="_blank">Source</a>${e.archive_url?`<a href="${esc(e.archive_url)}" rel="noopener" target="_blank">Archive</a>`:''}<a href="stories/${esc(e.id)}.html">Full record</a></div>
         </article>`;
     }
     $('#ledger').innerHTML=rows.length?html+'</div>':'<p class="empty">Nothing in the archive matches.</p>';
@@ -51,7 +53,7 @@
     if(lead){
       $('#cover').innerHTML=`<div>
         <p class="kicker">Cover Story · ${esc(LABEL[lead.category])}</p>
-        <h2><a href="${esc(lead.url)}" rel="noopener" target="_blank">${esc(lead.title)}</a></h2>
+        <h2><a href="stories/${esc(lead.id)}.html">${esc(lead.title)}</a></h2>
         <p class="dek">${esc(lead.summary)}</p>
         <p class="byline">${esc([fmtDate(lead.date),lead.outlet,lead.status].filter(Boolean).join(' · '))}</p></div>
         <aside class="contents"><h3>In This Issue</h3>${[['lawsuit','Court Docket'],['regulator','Regulators'],['news','Reporting'],['tenant','Letters from Tenants'],['bf','The Chairman']]
@@ -67,7 +69,7 @@
   const pick=e=>{const b=e.target.closest('button[data-cat]');if(!b)return;st.cat=b.dataset.cat;sync();render();
     if(e.currentTarget.id==='cover')document.querySelector('.toolbar').scrollIntoView({behavior:'smooth'})};
   $('#cats').addEventListener('click',pick);$('#cover').addEventListener('click',pick);
-  $('#q').addEventListener('input',e=>{st.q=e.target.value.trim();render()});
+  $('#q').addEventListener('input',e=>{st.q=e.target.value.trim();render();history.replaceState(null,'',st.q?'?q='+encodeURIComponent(st.q):location.pathname)});
   $('#loc').addEventListener('change',e=>{st.loc=e.target.value;render()});
   $('#sort').addEventListener('change',e=>{st.sort=e.target.value;render()});
   // ---- Property directory (footer) ----

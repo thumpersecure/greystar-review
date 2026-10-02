@@ -1,0 +1,15 @@
+{
+  "name": "The Greystar Review",
+  "short_name": "Greystar Review",
+  "description": "A sourced record of lawsuits, regulator actions, reporting and tenant letters on Greystar and Bob Faith.",
+  "start_url": "/greystar-review/",
+  "scope": "/greystar-review/",
+  "display": "standalone",
+  "background_color": "#f6f2ea",
+  "theme_color": "#141310",
+  "icons": [
+    {"src": "/greystar-review/assets/icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "/greystar-review/assets/icon-512.png", "sizes": "512x512", "type": "image/png"},
+    {"src": "/greystar-review/assets/favicon.svg", "sizes": "any", "type": "image/svg+xml"}
+  ]
+}

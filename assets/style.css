@@ -57,3 +57,11 @@ a{color:var(--red)}
 .mini-plate{font:900 28px "Playfair Display",serif;color:var(--ink);margin:0 0 8px}
 @media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.cover{grid-template-columns:1fr}.contents{border-left:0;padding-left:0}}
 @media (max-width:600px){.grid{grid-template-columns:1fr}.hide-sm{display:none}.nameplate h1{white-space:normal;font-size:64px}.depts button{padding:10px 8px;font-size:11px}}
+
+.faq{max-width:1180px;margin:40px auto 0;padding:0 16px}
+.faq h2{font:900 40px "Playfair Display",serif;margin:0 0 8px;border-top:4px solid var(--ink);padding-top:16px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;padding:14px 0;font:700 20px "Playfair Display",serif}
+.faq details p{margin:0 0 12px;max-width:760px}
+.faq-src{font:600 11px "Libre Franklin",sans-serif;letter-spacing:.06em;text-transform:uppercase}
+.faq-src a{margin-right:6px}
