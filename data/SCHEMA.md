@@ -14,3 +14,4 @@
   "status": "e.g. settled $24M / pending / dismissed / published"
 }
 Rules: every entry needs a real primary-source URL you actually verified (fetched or confirmed via search result showing that URL). No invented URLs. If unverifiable, omit it. Allegations = "alleged"/"according to". No private individuals' contact info; tenant reviewers by first name/initial only.
+Wording rule: never use "approve", "approved", "approval" or "approving" in any title, summary or status (say "court finalized", "pending before the court", "final fairness hearing", "signs off").

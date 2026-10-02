@@ -33,6 +33,8 @@ for label in ('approved', 'rejected'):
             comment_close(n, f'Not published: missing/invalid {missing or "category"}. Fix the JSON and reopen.'); continue
         for k in ('location', 'property', 'outlet', 'archive_url', 'summary', 'status'):
             e.setdefault(k, '')
+        if re.search(r'approv', ' '.join(str(e.get(k, '')) for k in ('title', 'summary', 'status')), re.I):
+            comment_close(n, 'Not published: the site never uses "approve/approved/approval". Reword the title/summary/status and reopen.'); continue
         entries = json.load(open(ENTRIES))
         if not any(x['id'] == e['id'] or x['url'] == e['url'] for x in entries):
             entries.append(e); entries.sort(key=lambda x: x['date'], reverse=True)
