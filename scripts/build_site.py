@@ -29,7 +29,7 @@ from collections import OrderedDict, defaultdict
 SITE = "https://thumpersecure.github.io/greystar-review"
 BASE = "/greystar-review"
 NAME = "The Greystar Review"
-OG_IMAGE = SITE + "/assets/og.png"
+OG_IMAGE = SITE + "/assets/og.jpg"
 ISSUES = "https://github.com/thumpersecure/greystar-review/issues/new?labels=correction"
 FONTS = ("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;"
          "1,400;1,700;1,900&family=Libre+Franklin:wght@400;600;800&family=Source+Serif+4:ital,"
@@ -544,6 +544,15 @@ def build_story(e, entries, prop_index):
 INTRO_RE = re.compile(r"<!--INTRO:START-->(.*?)<!--INTRO:END-->", re.S)
 
 
+SECTION_ART = {"court-docket": "docket", "regulators": "regulators", "reporting": "reporting",
+               "letters": "letters", "the-chairman": "chairman"}
+
+
+def art_img(name, eager=True):
+    return ('<img class="sec-art" src="%s/assets/art/%s.webp" alt="" width="1280" height="720"%s>'
+            % (BASE, name, "" if eager else ' loading="lazy"'))
+
+
 def build_section(sec, entries):
     slug, label, h1, ttl, intro, pred, desc = sec
     items = sorted([e for e in entries if pred(e)], key=lambda e: e["date"], reverse=True)
@@ -572,9 +581,11 @@ def build_section(sec, entries):
     body = """<header class="sec-head">
   <p class="kicker">{label} · {n} records · Last updated {upd}</p>
   <h1>{h1}</h1>
+  {art}
   <!--INTRO:START-->{intro}<!--INTRO:END-->
 </header>
 <div class="grid">{grid}</div>""".format(label=esc(label), n=len(items), h1=esc(h1), intro=intro_html, grid=grid,
+                         art=art_img(SECTION_ART.get(slug, "cover-wide")),
                          upd=esc(fmt_date(max((e["date"] for e in items), default=TODAY))))
     ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "%s | %s" % (label, NAME),
           "url": url, "description": desc,
@@ -686,12 +697,14 @@ def build_properties(props, entries):
         body = """<header class="sec-head">
   <p class="kicker">Property index · {n} properties · {nc} {cw}</p>
   <h1>Greystar Apartments in {name}</h1>
+  {art}
   <p class="dek">{intro}</p>
 </header>
 {rs}
 <h2 class="list-h">Properties by city</h2>
 <div class="cities">{blocks}</div>""".format(
             n=n, nc=len(cities), cw="city" if len(cities) == 1 else "cities", name=esc(name), intro=esc(intro),
+            art=art_img("properties"),
             rs=rs_html, blocks="".join(blocks))
         ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": title, "url": url,
               "description": desc, "about": GREYSTAR,
@@ -725,11 +738,12 @@ def build_properties(props, entries):
     body = """<header class="sec-head">
   <p class="kicker">Property index · {total} properties · {nr} states &amp; regions</p>
   <h1>Greystar Apartments by State</h1>
+  {art}
   <p class="dek">An index of every property in Greystar's public property directory, by state and region. Each state page lists properties by city with a link to Greystar's listing, plus any lawsuits, regulator actions, reporting or tenant complaints connected to that state. Listing a property only means it appears in that directory.</p>
 </header>
 <h2 class="list-h">United States</h2>{us}
 <h2 class="list-h">International</h2>{intl}
-{small}""".format(total="{:,}".format(len(props)), nr=len(rows), us=tbl([r for r in rows if r[0] in STATES]),
+{small}""".format(art=art_img("properties"), total="{:,}".format(len(props)), nr=len(rows), us=tbl([r for r in rows if r[0] in STATES]),
                   intl=tbl([r for r in rows if r[0] not in STATES]), small=small_html)
     url = SITE + "/properties/"
     paged = [r for r in rows if r[0] in STATE_PAGES]

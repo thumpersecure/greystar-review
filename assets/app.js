@@ -51,13 +51,24 @@
     $('#count').textContent=`${all.length} stories on record`;
     const lead=all.find(e=>e.featured)||all.filter(e=>e.category==='regulator'||e.category==='lawsuit').sort((a,b)=>b.date.localeCompare(a.date))[0];
     if(lead){
-      $('#cover').innerHTML=`<div>
-        <p class="kicker">Cover Story · ${esc(LABEL[lead.category])}</p>
-        <h2><a href="stories/${esc(lead.id)}.html">${esc(lead.title)}</a></h2>
-        <p class="dek">${esc(lead.summary)}</p>
-        <p class="byline">${esc([fmtDate(lead.date),lead.outlet,lead.status].filter(Boolean).join(' · '))}</p></div>
-        <aside class="contents"><h3>In This Issue</h3>${[['lawsuit','Court Docket'],['regulator','Regulators'],['news','Reporting'],['tenant','Letters from Tenants'],['bf','The Chairman']]
-          .map(([k,l])=>`<button data-cat="${k}">${l}<b>${c(k)}</b></button>`).join('')}</aside>`;
+      const n=k=>c(k).toLocaleString();
+      const THUMB={lawsuit:'docket',regulator:'regulators',news:'reporting',tenant:'letters',bf:'chairman'};
+      $('#cover').innerHTML=`<a class="mag" href="stories/${esc(lead.id)}.html" aria-label="Cover story: ${esc(lead.title)}">
+          <img src="assets/art/cover.webp" alt="" width="576" height="720" fetchpriority="high">
+          <span class="mag-flag">Every story sourced</span>
+          <span class="mag-issue">Vol. I · ${esc(new Date().toLocaleString('en-US',{month:'long',year:'numeric'}))}</span>
+          <span class="mag-plate"><span class="the">The</span> Greystar Review</span>
+          <span class="mag-side"><b>${n('lawsuit')}</b> lawsuits<b>${n('regulator')}</b> regulator actions<b>${n('tenant')}</b> letters from tenants</span>
+          <span class="mag-lead"><span class="mag-kick">Cover Story</span><span class="mag-big">${esc(lead.cover_big||lead.title)}</span>${lead.cover_sub?`<span class="mag-sub">${esc(lead.cover_sub)}</span>`:''}</span>
+        </a>
+        <div class="cover-text">
+          <p class="kicker">Cover Story · ${esc(LABEL[lead.category])}</p>
+          <h2><a href="stories/${esc(lead.id)}.html">${esc(lead.title)}</a></h2>
+          <p class="dek">${esc(lead.summary)}</p>
+          <p class="byline">${esc([fmtDate(lead.date),lead.outlet,lead.status].filter(Boolean).join(' · '))}</p>
+          <aside class="contents"><h3>In This Issue</h3>${[['lawsuit','Court Docket'],['regulator','Regulators'],['news','Reporting'],['tenant','Letters from Tenants'],['bf','The Chairman']]
+            .map(([k,l])=>`<button data-cat="${k}"><img src="assets/art/${THUMB[k]}-thumb.webp" alt="" width="96" height="54" loading="lazy"><span>${l}</span><b>${c(k)}</b></button>`).join('')}</aside>
+        </div>`;
     }
     const locs=[...new Set(all.map(e=>e.location).filter(Boolean))].sort();
     $('#loc').innerHTML='<option value="">All locations</option>'+locs.map(l=>`<option>${esc(l)}</option>`).join('');

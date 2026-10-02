@@ -14,15 +14,15 @@ a{color:var(--red)}
 .depts{display:flex;justify-content:center;flex-wrap:wrap;gap:0;border-bottom:1px solid var(--ink)}
 .depts button{font:800 12px "Libre Franklin",sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:12px 14px;background:none;border:0;color:var(--ink);cursor:pointer;border-bottom:3px solid transparent}
 .depts button.on{border-bottom-color:var(--red);color:var(--red)}
-.cover{display:grid;grid-template-columns:2fr 1fr;gap:36px;padding-top:30px;padding-bottom:30px;border-bottom:1px solid var(--ink)}
+.cover{display:grid;grid-template-columns:minmax(300px,440px) 1fr;gap:40px;align-items:start;padding-top:30px;padding-bottom:30px;border-bottom:1px solid var(--ink)}
 .kicker{font:800 11.5px "Libre Franklin",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin:0 0 8px}
 .cover h2{font:900 clamp(32px,5vw,58px)/1.02 "Playfair Display",serif;margin:0 0 14px;letter-spacing:-.01em}
 .cover h2 a{color:var(--ink);text-decoration:none}
 .cover .dek{font:italic 400 21px/1.4 "Source Serif 4",serif;color:var(--mute);margin:0 0 14px}
 .byline{font:600 12px "Libre Franklin",sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
-.contents{border-left:1px solid var(--line);padding-left:24px}
+.contents{margin-top:22px}
 .contents h3{font:800 12px "Libre Franklin",sans-serif;letter-spacing:.16em;text-transform:uppercase;margin:0 0 12px;padding-bottom:8px;border-bottom:3px solid var(--ink)}
-.contents button{display:flex;justify-content:space-between;align-items:baseline;width:100%;background:none;border:0;border-bottom:1px solid var(--line);padding:10px 0;color:var(--ink);cursor:pointer;text-align:left;font:700 19px "Playfair Display",serif}
+.contents button{display:flex;gap:14px;align-items:center;width:100%;background:none;border:0;border-bottom:1px solid var(--line);padding:10px 0;color:var(--ink);cursor:pointer;text-align:left;font:700 19px "Playfair Display",serif}
 .contents button b{font:900 28px "Playfair Display",serif;color:var(--red)}
 .toolbar{display:flex;gap:10px;flex-wrap:wrap;padding-top:18px;padding-bottom:6px}
 #q{flex:1 1 320px;padding:11px 12px;font:15px "Libre Franklin",sans-serif;background:var(--card);color:var(--ink);border:1px solid var(--ink);border-radius:0}
@@ -65,3 +65,28 @@ a{color:var(--red)}
 .faq details p{margin:0 0 12px;max-width:760px}
 .faq-src{font:600 11px "Libre Franklin",sans-serif;letter-spacing:.06em;text-transform:uppercase}
 .faq-src a{margin-right:6px}
+
+/* ---- Magazine cover ---- */
+.mag{container-type:inline-size;position:relative;display:block;aspect-ratio:4/5;overflow:hidden;color:#f6f2ea;text-decoration:none;background:#2a2620;box-shadow:0 1px 0 var(--ink),0 18px 40px -18px rgba(0,0,0,.55);transition:transform .25s ease}
+.mag:hover{transform:translateY(-3px)}
+.mag img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mag::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,19,16,.55) 0%,rgba(20,19,16,0) 30%,rgba(20,19,16,0) 52%,rgba(20,19,16,.82) 100%)}
+.mag>span{position:absolute;z-index:1}
+.mag-issue{top:2.8cqw;left:3.8cqw;right:3.8cqw;font:800 2.3cqw "Libre Franklin",sans-serif;letter-spacing:.18em;text-transform:uppercase;opacity:.9}
+.mag-plate{top:6.5cqw;left:3.5cqw;right:3.5cqw;font:900 12.3cqw/.95 "Playfair Display",serif;letter-spacing:-.03em;text-shadow:0 2px 14px rgba(0,0,0,.45);white-space:nowrap}
+.mag-plate .the{font-size:.36em;vertical-align:1.15em}
+.mag-flag{top:0;right:0;background:var(--red);color:#fff;font:800 2.2cqw "Libre Franklin",sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:6px 10px;transform-origin:top right}
+.mag-side{left:3.8cqw;top:30%;width:30%;font:600 2.3cqw/1.2 "Libre Franklin",sans-serif;letter-spacing:.06em;text-transform:uppercase;text-shadow:0 1px 6px rgba(0,0,0,.7)}
+.mag-side b{display:block;font:900 6.4cqw/1 "Playfair Display",serif;letter-spacing:0;margin-top:2.4cqw;color:#fff}
+.mag-lead{left:3.8cqw;right:3.8cqw;bottom:4cqw}
+.mag-kick{display:inline-block;background:var(--red);color:#fff;font:800 2.3cqw "Libre Franklin",sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:4px 8px;margin-bottom:8px}
+.mag-big{display:block;font:900 13.5cqw/.95 "Playfair Display",serif;letter-spacing:-.02em;text-shadow:0 2px 16px rgba(0,0,0,.5)}
+.mag-sub{display:block;font:italic 400 4cqw/1.3 "Source Serif 4",serif;margin-top:1.4cqw;max-width:92%;text-shadow:0 1px 8px rgba(0,0,0,.7)}
+.cover-text h2{font-size:clamp(28px,3.6vw,46px)}
+.contents button img{width:96px;height:54px;object-fit:cover;flex:none;filter:saturate(.9)}
+.contents button span{flex:1}
+.contents button b{margin-left:auto}
+/* section banners on generated pages */
+.sec-art{display:block;width:100%;max-width:none;height:clamp(170px,26vw,330px)!important;object-fit:cover;object-position:center 45%;margin:6px 0 18px;border-top:4px solid var(--ink)}
+@media (max-width:900px){.cover{grid-template-columns:1fr}.mag{max-width:460px;width:100%;margin:0 auto}}
+@media (max-width:420px){.mag-plate{top:6.5cqw;left:3.5cqw;right:3.5cqw;font:900 12.3cqw/.95 "Playfair Display",serif;letter-spacing:-.03em;text-shadow:0 2px 14px rgba(0,0,0,.45);white-space:nowrap}.mag-side b{display:block;font:900 6.4cqw/1 "Playfair Display",serif;letter-spacing:0;margin-top:2.4cqw;color:#fff}}

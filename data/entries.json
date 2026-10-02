@@ -335,7 +335,9 @@
   "archive_url": "",
   "summary": "Greystar agreed to pay $23 million to the FTC for consumer refunds and $1 million to Colorado, and to clearly and conspicuously display total monthly prices, including mandatory fees, in its rental listings.",
   "status": "settled $24M (proposed stipulated order)",
-  "featured": true
+  "featured": true,
+  "cover_big": "$24 Million",
+  "cover_sub": "The FTC's hidden-fee case against America's largest landlord, settled"
  },
  {
   "id": "colorado-settles-hidden-fees-lawsuit-against-greystar-in-the-latest-ca-2025",
