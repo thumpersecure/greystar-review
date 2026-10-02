@@ -19,6 +19,7 @@ the existing page is preserved on rebuild as long as it no longer carries the
 data-default attribute; otherwise the default copy (from SEO-PLAN.md) is used.
 """
 import datetime
+import glob
 import html
 import json
 import os
@@ -354,6 +355,8 @@ def nav_links(current=None):
     items = [("%s/" % BASE, "The Record", None)]
     items += [("%s/%s/" % (BASE, s[0]), s[1], s[0]) for s in SECTIONS]
     items += [("%s/properties/" % BASE, "Properties", "properties")]
+    if glob.glob(os.path.join("content", "states", "*.md")):
+        items += [("%s/states/" % BASE, "By State", "states")]
     return "".join('<a href="%s"%s>%s</a>' % (h, ' class="on" aria-current="page"' if k and k == current else "",
                                               esc(l)) for h, l, k in items)
 
@@ -673,8 +676,14 @@ def build_properties(props, entries):
                         '</span> <a class="gs"', '</span> <span class="pc">%s</span> <a class="gs"' % esc(p["c"]), 1)
                     for p in sorted(small, key=lambda p: (p["c"].lower(), pkey(p))))))
         rs_html = ""
+        import build_states  # lazy: build_states imports this module
+        rep = build_states.report_href(name)
+        if rep:
+            rs_html += ('<p class="note">Read the <a href="%s">Greystar in %s state report</a>: a sourced summary of the '
+                        'lawsuits, regulator actions, reporting and tenant accounts connected to %s.</p>'
+                        % (rep, esc(name), esc(name)))
         if rstories:
-            rs_html = '<section class="related"><h2>Records from %s</h2><div class="grid">%s</div></section>' % (
+            rs_html += '<section class="related"><h2>Records from %s</h2><div class="grid">%s</div></section>' % (
                 esc(name), "".join(entry_card(e, "h3") for e in rstories))
         title = "Greystar Apartments in %s (%d %s)" % (name, n, "Property" if n == 1 else "Properties")
         comm = "apartment community" if n == 1 else "apartment communities"
@@ -886,6 +895,10 @@ def main():
     for path, content in ppages.items():
         changed += write(path, content)
     changed += write("about.html", build_about(entries))
+    import build_states
+    state_pages, state_urls = build_states.build(entries, props)
+    for path, content in state_pages.items():
+        changed += write(path, content)
     inject_index(entries, sections, regions)
 
     # sitemap
@@ -897,6 +910,7 @@ def main():
     for k, name, slug, n, nst in regions:
         if k in STATE_PAGES:
             urls.append(("%s/properties/%s.html" % (SITE, slug), TODAY))
+    urls.extend(state_urls)
     for e in sorted(entries, key=lambda e: e["date"], reverse=True):
         urls.append((story_url(e, True), e["date"]))
     sm = ['<?xml version="1.0" encoding="UTF-8"?>',
