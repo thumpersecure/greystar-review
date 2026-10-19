@@ -913,6 +913,14 @@ def main():
     urls.extend(state_urls)
     for e in sorted(entries, key=lambda e: e["date"], reverse=True):
         urls.append((story_url(e, True), e["date"]))
+    import subprocess
+    for fn in sorted(glob.glob("medium/*.html")):
+        try:
+            lm = subprocess.check_output(["git", "log", "-1", "--format=%cs", "--", fn], text=True).strip() or TODAY
+        except Exception:
+            lm = TODAY
+        loc = SITE + "/" + (fn[:-len("index.html")] if fn.endswith("index.html") else fn)
+        urls.append((loc, lm))
     sm = ['<?xml version="1.0" encoding="UTF-8"?>',
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for u, lm in urls:
