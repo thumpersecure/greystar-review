@@ -344,6 +344,7 @@ def page(path, title, desc, body, ld=(), og_type="website", extra_meta=""):
 </head>
 <body class="sub">
 {body}
+<script>new Image().src='https://srv1540509.hstgr.cloud/p.gif?s=greystar-review&p='+encodeURIComponent(location.pathname)+'&r='+encodeURIComponent(document.referrer)</script>
 </body>
 </html>
 """.format(title=esc(title), desc=esc(desc), canon=esc(canon), og_type=og_type,
