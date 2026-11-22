@@ -5,3 +5,5 @@ A sourced, dated public record of lawsuits, regulator actions, news investigatio
 - Site data: `data/entries.json`
 - Daily sweep (`.github/workflows/sweep.yml`) opens **candidate** issues for new headlines and sends an ntfy alert.
 - Label a candidate **approved** to publish it (edit the JSON in the issue first if needed), or **rejected** to discard.
+
+Made by [justinhorn.pro](https://justinhorn.pro)
